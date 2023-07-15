@@ -1,0 +1,98 @@
+
+.primary {
+    width: 100%;
+    padding-top: 17px;
+    padding-bottom: 25px;
+    border-radius: 16px;
+}
+
+.bg-primary-yellow {
+    background-color: var(--light-yellow);
+    box-shadow: 0px -8px 0px 0px var(--dark-yellow) inset;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        background-color: var(--yellow);
+    }
+
+    &:active {
+        background-color: var(--dark-yellow);
+    }
+}
+
+.bg-primary-blue {
+    background-color: var(--light-blue);
+    box-shadow: 0px -8px 0px 0px var(--dark-blue) inset;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        background-color: var(--blue);
+    }
+
+    &:active {
+        background-color: var(--dark-blue);
+    }
+}
+
+.bg-primary-grey {
+    background-color: var(--light-grey);
+    box-shadow: 0px -8px 0px 0px var(--dark-grey) inset;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        background-color: var(--grey);
+    }
+
+    &:active {
+        background-color: var(--dark-grey);
+    }
+}
+
+.secondary {
+    width: fit-content;
+    padding-top: 15px;
+    padding: 15px 16px 18px 16px;
+    border-radius: 10px;
+}
+
+.bg-secondary-yellow {
+    background-color: var(--light-yellow);
+    box-shadow: 0px -4px 0px 0px var(--dark-yellow) inset;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        background-color: var(--yellow);
+    }
+
+    &:active {
+        background-color: var(--dark-yellow);
+    }
+}
+
+.bg-secondary-blue {
+    background-color: var(--light-blue);
+    box-shadow: 0px -4px 0px 0px var(--dark-blue) inset;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        background-color: var(--blue);
+    }
+
+    &:active {
+        background-color: var(--dark-blue);
+    }
+}
+
+.bg-secondary-grey {
+    background-color: var(--light-grey);
+    box-shadow: 0px -4px 0px 0px var(--dark-grey) inset;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        background-color: var(--grey);
+    }
+
+    &:active {
+        background-color: var(--dark-grey);
+    }
+}

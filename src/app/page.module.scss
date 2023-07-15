@@ -1,0 +1,41 @@
+.main {
+    gap: 20px
+}
+
+.shape-container {
+    display: flex;
+    gap: 8px;
+}
+
+.title-container {
+    background-color: var(--semi-dark-navy);
+    padding-top: 20px;
+    padding-bottom: 24px;
+    width: 100%;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px -8px 0px 0px #10212A inset;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+  
+// .wave-text {
+//     display: inline-block;
+//     font-size: 2.5em;
+// }
+
+// .wave-char  {
+//     position: relative;
+//     animation: wave 0.8s infinite;
+//     transform-origin: 70% 70%;
+//     display: inline-block;
+// }
+  
