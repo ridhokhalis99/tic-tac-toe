@@ -1,4 +1,5 @@
 import Field from "./field";
+import TopBar from "./topBar";
 
 interface playGameProps {
   setCurrentScreen: (screen: string) => void;
@@ -9,6 +10,7 @@ const PlayGame = (props: playGameProps) => {
 
   return (
     <div>
+      <TopBar />
       <Field />
     </div>
   );
