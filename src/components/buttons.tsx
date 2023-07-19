@@ -4,6 +4,7 @@ interface ButtonProps {
   type?: "primary" | "secondary";
   backgroundColor?: "yellow" | "blue" | "grey";
   className?: string;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const Button = (props: ButtonProps) => {
@@ -12,6 +13,7 @@ export const Button = (props: ButtonProps) => {
     children,
     type = "secondary",
     className: classNameProps,
+    onClick,
   } = props;
 
   const decideClassName = () => {
@@ -28,5 +30,9 @@ export const Button = (props: ButtonProps) => {
     styles[`bg-${type}-${backgroundColor}`]
   } ${classNameProps}`;
 
-  return <button className={className}>{children}</button>;
+  return (
+    <button className={className} onClick={onClick}>
+      {children}
+    </button>
+  );
 };
