@@ -1,3 +1,4 @@
+import { Button } from "@/components/buttons";
 import { Shape } from "@/components/shapes";
 import styles from "@/styles/pages/playGame.module.scss";
 
@@ -12,6 +13,9 @@ const TopBar = () => {
         <Shape name="cross" size={24} fill="grey" />
         <h1 className={`${styles["turn-text"]} heading-xs`}> Turn</h1>
       </div>
+      <Button>
+        <Shape name="restart" size={18} />
+      </Button>
     </div>
   );
 };

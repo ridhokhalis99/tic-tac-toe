@@ -1,7 +1,7 @@
 interface ShapeProps {
   fill?: string;
   size?: number;
-  name: "cross" | "circle";
+  name: "cross" | "circle" | "restart";
 }
 
 interface ShapeComponentProps {
@@ -51,9 +51,31 @@ const Circle = (props: ShapeComponentProps) => {
   );
 };
 
+const Restart = (props: ShapeComponentProps) => {
+  const { fill = "silver", size = 32 } = props;
+  return (
+    <svg viewBox="124.098 174.253 16 16" width={size} height={size}>
+      <path
+        d="M 139.718 174.253 L 138.213 174.253 C 138.003 174.253 137.833 174.423 137.832 174.633 C 137.832 174.64 137.832 174.646 137.833 174.652 L 137.96 177.279 C 136.466 175.518 134.274 174.504 131.966 174.507 C 127.631 174.507 124.095 178.047 124.098 182.386 C 124.101 186.731 127.623 190.253 131.966 190.253 C 133.914 190.256 135.794 189.532 137.238 188.224 C 137.395 188.084 137.408 187.843 137.268 187.686 C 137.263 187.681 137.258 187.676 137.253 187.671 L 136.175 186.591 C 136.033 186.45 135.806 186.442 135.655 186.574 C 133.34 188.612 129.812 188.386 127.775 186.07 C 125.738 183.753 125.963 180.222 128.279 178.184 C 130.594 176.146 134.122 176.371 136.159 178.688 C 136.319 178.87 136.466 179.062 136.601 179.262 L 133.38 179.108 C 133.17 179.098 132.992 179.26 132.982 179.47 C 132.981 179.476 132.981 179.483 132.981 179.489 L 132.981 180.994 C 132.981 181.204 133.152 181.375 133.362 181.375 L 139.718 181.375 C 139.928 181.375 140.098 181.204 140.098 180.994 L 140.098 174.634 C 140.098 174.423 139.928 174.253 139.718 174.253 Z"
+        fill={`var(--${fill})`}
+      ></path>
+    </svg>
+  );
+};
+
 export const Shape = ({ name, fill, size }: ShapeProps) => {
-  const isCross = name === "cross";
-  const ShapeComponent = isCross ? Cross : Circle;
+  const decideShape = () => {
+    switch (name) {
+      case "cross":
+        return Cross;
+      case "circle":
+        return Circle;
+      case "restart":
+        return Restart;
+    }
+  };
+
+  const ShapeComponent = decideShape();
 
   return <ShapeComponent fill={fill} size={size} />;
 };
